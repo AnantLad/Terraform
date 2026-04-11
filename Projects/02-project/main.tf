@@ -1,0 +1,11 @@
+provider "aws" {
+    region = "us-east-1"
+}
+resource "aws_instance" "anant" {
+    ami = "ami-0b6c6ebed2801a5cb"
+    instance_type = "t3.micro"
+    subnet_id = "subnet-0146e29f56ca7222e"
+}
+resource "aws_s3_bucket" "s3_bucket" {
+    bucket = "anant-s3-bucket-01"
+}
